@@ -1,0 +1,29 @@
+name: "Your Region Name"
+bounds: [W, S, E, N]  # [longitude_west, lat_south, lon_east, lat_north]
+country: "XX"  # ISO 2-letter country code
+crop: "crop type"  # e.g. "Rice", "Wheat", "Sugarcane"
+
+pre_start: "09-01"  # MM-DD format (year auto-applied)
+pre_end: "09-30"
+post_start: "10-15"
+post_end: "11-30"
+
+s2_cloud_pct: 35  # Increase for cloudy regions (monsoon)
+firms_temp_k: 320  # T21 threshold — 320K standard
+scale_s2: 100
+scale_s5p: 5500
+
+straw_yield_t_per_km2: 400  # Adjust per crop type
+pm25_g_per_kg: 6.0  # Emission factor (Andreae 2019)
+co2_g_per_kg: 1515.0
+health_cost_usd_per_t_pm25: 75000  # WHO VSL South Asia
+
+alert_fire_km2: 50  # km² threshold to trigger district alert
+alert_no2_pct: 30  # % NO2 increase to trigger AQ alert
+
+sub_regions:
+  "District Name": [W, S, E, N]
+  # Add more districts as "Name": [W, S, E, N]
+
+alert_email: "optional@email.gov"
+language: "en"

@@ -1,0 +1,32 @@
+name: "Punjab & Haryana, India"
+bounds: [73.5, 29.5, 77.5, 32.5]
+country: "IN"
+crop: "Rice (Kharif)"
+
+pre_start: "09-01"
+pre_end: "09-30"
+post_start: "10-15"
+post_end: "11-30"
+
+s2_cloud_pct: 35
+firms_temp_k: 320
+scale_s2: 100
+scale_s5p: 5500
+
+straw_yield_t_per_km2: 400
+pm25_g_per_kg: 6.0
+co2_g_per_kg: 1515.0
+health_cost_usd_per_t_pm25: 75000
+
+alert_fire_km2: 50
+alert_no2_pct: 30
+
+sub_regions:
+  Amritsar: [74.5, 31.3, 75.4, 32.2]
+  Ludhiana: [75.5, 30.5, 76.3, 31.2]
+  Patiala: [76.0, 29.9, 76.8, 30.8]
+  Hisar: [75.3, 29.0, 76.2, 29.8]
+  Rohtak: [76.3, 28.6, 77.0, 29.2]
+
+alert_email: "ppcb@punjab.gov.in"
+language: "en"

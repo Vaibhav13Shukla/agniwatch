@@ -1,0 +1,29 @@
+name: "Maharashtra, India"
+bounds: [72.6, 15.6, 80.9, 22.0]
+country: "IN"
+crop: "Sugarcane"
+
+pre_start: "09-01"
+pre_end: "10-31"
+post_start: "11-01"
+post_end: "03-31"
+
+s2_cloud_pct: 35
+firms_temp_k: 320
+scale_s2: 100
+scale_s5p: 5500
+
+straw_yield_t_per_km2: 400
+pm25_g_per_kg: 6.0
+co2_g_per_kg: 1515.0
+health_cost_usd_per_t_pm25: 75000
+
+alert_fire_km2: 50
+alert_no2_pct: 30
+
+sub_regions:
+  Pune: [73.5, 17.8, 74.5, 18.8]
+  Nashik: [73.5, 19.5, 74.5, 20.5]
+  Kolhapur: [73.8, 16.3, 74.5, 17.0]
+
+language: "en"

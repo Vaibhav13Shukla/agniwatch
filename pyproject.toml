@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agniwatch"
+version = "3.0.0"
+description = "Agricultural Fire and Air Quality Intelligence Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "AGNIWATCH Contributors" }
+]
+dependencies = [
+  "earthengine-api==1.7.21",
+  "geemap==0.37.2",
+  "streamlit>=1.32.0",
+  "plotly>=5.18.0",
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+  "matplotlib>=3.7.0",
+  "pyyaml>=6.0",
+  "folium>=0.15.0",
+]
+
+[tool.setuptools]
+packages = ["core"]

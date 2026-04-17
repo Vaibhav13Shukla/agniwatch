@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Notebook artifacts
+.ipynb_checkpoints/
+
+# Secrets and env
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*service_account*.json
+*.pem
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
