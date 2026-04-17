@@ -16,6 +16,7 @@ class EmissionResult:
     ch4_tonnes: float
     nox_tonnes: float
     bc_tonnes: float
+    n2o_tonnes: float
     health_cost_usd: float
     carbon_credit_usd: float
     all_pollutants: Dict
@@ -72,6 +73,7 @@ def calculate_emissions(burned_area_km2: float,
         ch4_tonnes=ch4,
         nox_tonnes=emit(EMISSION_FACTORS['NOx']['value']),
         bc_tonnes=emit(EMISSION_FACTORS['BC']['value']),
+        n2o_tonnes=emit(EMISSION_FACTORS['N2O']['value']),
         health_cost_usd=health_cost,
         carbon_credit_usd=carbon_credit,
         all_pollutants=all_pollutants,

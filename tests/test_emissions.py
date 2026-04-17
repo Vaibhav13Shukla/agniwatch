@@ -55,8 +55,18 @@ def test_all_pollutants_shape():
         assert "unit" in result.all_pollutants[pollutant]
 
 
+def test_n2o_tonnes_field():
+    """N2O tonnes was missing from the dataclass but present in all_pollutants dict."""
+    result = calculate_emissions(burned_area_km2=100.0, cfg=_cfg())
+    assert hasattr(result, "n2o_tonnes"), "n2o_tonnes field missing from EmissionResult"
+    assert result.n2o_tonnes > 0, "n2o_tonnes should be positive"
+    # Verify against the all_pollutants dict (they should match)
+    assert abs(result.n2o_tonnes - result.all_pollutants["N2O"]["tonnes"]) < 1e-9
+
+
 if __name__ == "__main__":
     test_calculate_emissions_basic()
     test_properties()
     test_all_pollutants_shape()
+    test_n2o_tonnes_field()
     print("All emission tests passed.")
